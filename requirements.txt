@@ -1,0 +1,5 @@
+pandas==3.0.2
+numpy==2.4.4
+scikit-survival==0.28.0
+statsmodels==0.15.0
+matplotlib==3.10.9
