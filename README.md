@@ -6,7 +6,7 @@ The model results, hazard ratios, interaction tests, calibration estimates and F
 
 ## What it does
 
-- **Neuroblastoma (TARGET-NBL).** Trains a Cox model on established factors (age at diagnosis ≥18 months, INSS stage, *MYCN* amplification, ploidy) in children diagnosed through 2008 and tests it in children diagnosed 2009–2012. Reports discrimination (C-index with bootstrap CIs), calibration slope, era-specific hazard ratios with factor × era interaction tests, and observed-minus-predicted 3-year recorded event-free survival by subgroup.
+- **Neuroblastoma (TARGET-NBL).** Trains a Cox model on established factors (age at diagnosis ≥18 months, INSS stage, *MYCN* amplification, ploidy) in children diagnosed through 2008 and tests it in children diagnosed 2009–2012. Reports discrimination (C-index with bootstrap CIs), calibration slope, era-specific hazard ratios with factor × era interaction tests, and observed-minus-predicted 3-year recorded event-free survival by subgroup. Includes an independently written rebuild that reproduces the main results.
 - **Acute myeloid leukemia (TARGET-AML).** The same audit, adapted to AML predictors and eras (development ≤2010, validation 2011–2017; APL trial AAML0631 excluded), as a second-cancer portability check. Includes a data-quality audit and an independently written rebuild that reproduces the main results.
 
 ## Key results
@@ -49,6 +49,9 @@ python aml_analysis.py        # temporal validation and subgroup calibration
 python aml_sens.py            # sensitivity analyses
 python aml_audit_conflicts.py data/TARGET-AML           # data-quality audit
 python aml_explore2.py data/TARGET-AML/follow_up.tsv    # counts of molecular test records
+
+# Neuroblastoma independent rebuild (written separately, for the independent audit)
+python nbl_independent_rebuild.py
 
 # AML independent rebuild (written separately from a specification)
 python aml_independent_build.py
