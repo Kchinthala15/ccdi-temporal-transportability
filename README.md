@@ -14,7 +14,7 @@ The model results, hazard ratios, interaction tests, calibration estimates and F
 | | Neuroblastoma | AML |
 |---|---|---|
 | Patients / first events | 814 / 400 | 1,993 / 1,055 |
-| C-index, development → validation | 0.67 → 0.57 | 0.64 → 0.62 |
+| C-index, development (apparent; optimism-corrected) → validation | 0.67; 0.66 → 0.57 | 0.64 (apparent) → 0.62 |
 | Calibration slope in validation | 0.41 | 0.85 (bootstrap 95% CI 0.68–1.05) |
 | Largest subgroup miscalibration (observed − predicted 3-year EFS) | Age ≥18 months +15.4 points; <18 months −14.5 points | *KMT2A*-rearranged −9.1 points; *FLT3*-ITD +7.8 points |
 
@@ -42,6 +42,7 @@ python nbl_prelim.py          # temporal validation, COG risk groups, subgroup c
 python nbl_era_effects.py     # era-specific hazard ratios and interaction tests
 python nbl_comparator.py      # simplified model using published nomogram variables
 python nbl_figure.py          # Figure 1 and subgroup table
+python nbl_stress_tests.py    # optimism-corrected C-index; age x era interaction across era cut-points 2006-2010 and continuous calendar year
 
 # AML
 python aml_cohort.py data/TARGET-AML

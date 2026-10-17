@@ -1,0 +1,7 @@
+spec,n_early,n_late,age_ratio,age_p,mycn_ratio,mycn_p
+era split after 2006,164.0,650.0,0.14,0.1043,1.07,0.763
+era split after 2007,229.0,585.0,0.4,0.1929,0.89,0.615
+era split after 2008,362.0,452.0,0.4,0.0042,0.7,0.096
+era split after 2009,538.0,276.0,0.42,0.0014,0.54,0.007
+era split after 2010,674.0,140.0,0.32,0.0006,0.78,0.403
+continuous calendar year (per year),,,0.764,0.0029,0.983,0.566
